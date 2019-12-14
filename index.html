@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Retorica Inspector</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+		<link href="main.css" rel="stylesheet" type="text/css" />
+		<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+		
+		<script src="main.js"></script>
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Retorica Showchaos
+      </h1>
+      <p class="subtitle">
+					Uno strumento flessibile e aperto attraverso cui creare e immaginare identità costruire grammatiche compositive e linguaggi.
+      </p>
+		</div>
+		
+		<div class="container">
+			<div class="columns">
+				<div class="column is-12">
+						<div class="field">
+								<div class="control">
+						<input type="text" class="input is-large" value="Type Text Here." id="textInput" onkeyup="updateParagraph();" onclick="this.select();" />
+								</div>
+							</div>
+				</div>
+			</div>
+			<div class="columns">
+				<div class="column is-one-quarter">
+						<div id="fonts">
+						</div>
+						<div id="controls">
+						</div>
+				</div>
+				<div class="column">
+					<p id="text">XYZ MATERA 2019</p>
+				</div>
+			</div>
+		</div>
+  </section>
+  </body>
+</html>
+
+

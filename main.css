@@ -1,0 +1,48 @@
+@font-face { 
+    font-family: "Variable";
+    src: url(fonts/XYZ-Retorica-Variable.ttf);
+}
+
+@font-face { 
+    font-family: "Climax";
+    src: url(fonts/XYZ-Retorica-Climax.ttf);
+}
+@font-face { 
+    font-family: "Expanded";
+    src: url(fonts/XYZ-Retorica-Expanded.ttf);
+}
+
+@font-face { 
+    font-family: "Iperbole";
+    src: url(fonts/XYZ-Retorica-Iperbole.ttf);
+}
+
+p {
+    z-index: 0;
+    position: relative;
+    margin: 0px;
+    padding: 5px;
+    padding-top: 0.2em;
+    line-height: 1em;
+    color: #000;
+    text-shadow: 0 0 0 #000;
+    font-family: "XYZ-Retorica";
+    font-feature-settings: "kern" on, "liga" on, "calt" on;
+    -moz-font-feature-settings: "kern" on, "liga" on, "calt" on;
+    -webkit-font-feature-settings: "kern" on, "liga" on, "calt" on;
+    -ms-font-feature-settings: "kern" on, "liga" on, "calt" on;
+    -o-font-feature-settings: "kern" on, "liga" on, "calt" on;
+    font-variation-settings: "wght" 100, "clup" 0, "cldw" 0, "clsx" 0, "cldx" 0, "expd" 100;
+}
+
+#text { font-size: 90px;}
+
+.salt-1 { font-feature-settings: "ss01" }
+.salt-2 { font-feature-settings: "ss02" }
+.salt-3 { font-feature-settings: "ss03" }
+.salt-4 { font-feature-settings: "ss04" }
+.salt-5 { font-feature-settings: "ss05" }
+.salt-6 { font-feature-settings: "ss06" }
+.salt-7 { font-feature-settings: "ss07" }
+.salt-8 { font-feature-settings: "ss08" }
+.salt-9 { font-feature-settings: "ss09" }
