@@ -17,6 +17,20 @@
     src: url(fonts/XYZ-Retorica-Iperbole.ttf);
 }
 
+body, html, body * {
+    font-family: 'Work Sans', sans-serif;
+}
+
+body.white * {
+    color: white;
+}
+
+body.black * {
+    color: black;
+}
+
+.subtitle { font-family: 'Work Sans', sans; font-weight: bold; }
+
 p {
     z-index: 0;
     position: relative;
@@ -25,9 +39,8 @@ p {
     padding-top: 0.2em;
     line-height: 1em;
     color: #000;
-    text-shadow: 0 0 0 #000;
-    font-family: "XYZ-Retorica";
-    font-feature-settings: "kern" on, "liga" on, "calt" on;
+    font-family: "Variable";
+    font-feature-settings: "kern" on, "liga" on, "calt" on, "salt" on;
     -moz-font-feature-settings: "kern" on, "liga" on, "calt" on;
     -webkit-font-feature-settings: "kern" on, "liga" on, "calt" on;
     -ms-font-feature-settings: "kern" on, "liga" on, "calt" on;
@@ -35,7 +48,12 @@ p {
     font-variation-settings: "wght" 100, "clup" 0, "cldw" 0, "clsx" 0, "cldx" 0, "expd" 100;
 }
 
-#text { font-size: 90px;}
+#sentence { margin: 40px 0px; }
+#text { font-size: 90px; font-weight: 500; }
+#fonts { margin-bottom: 20px; }
+.color-item { width: 30px; height: 30px; border: 4px solid white;  margin-bottom: 6px; float: left; margin-right: 10px; cursor: pointer; }
+.color-item:last-child { clear: right; }
+.circle { border-radius: 50% }
 
 .salt-1 { font-feature-settings: "ss01" }
 .salt-2 { font-feature-settings: "ss02" }
@@ -46,3 +64,222 @@ p {
 .salt-7 { font-feature-settings: "ss07" }
 .salt-8 { font-feature-settings: "ss08" }
 .salt-9 { font-feature-settings: "ss09" }
+
+.yellow { background-color: rgb(255, 190, 0) }
+.purple { background-color: rgb(100, 30, 180) }
+.green { background-color:  rgb(0, 120, 80) }
+.red { background-color:    rgb(220, 0, 0) }
+
+/* h1.title, h1.title:before, h1.title:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    } */
+
+h1.title {
+    display: inline-block !important;
+    font-size: 4rem; 
+}
+
+h1.title:after {
+    content: attr(data-shadow);
+    position: absolute;
+    top: .06em; left: .06em;
+    z-index: -1;
+    text-shadow: none;
+    background-image:
+    linear-gradient(
+        45deg,
+        transparent 45%,
+        hsla(48,20%,90%,1) 45%,
+        hsla(48,20%,90%,1) 55%,
+        transparent 0
+        );
+    background-size: .05em .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shad-anim 15s linear infinite;
+    }
+
+@keyframes shad-anim {
+0% {background-position: 0 0}
+0% {background-position: 100% -100%}
+}
+
+
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 80%;
+    margin: 10.2px 0;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2.6px;
+    cursor: pointer;
+    box-shadow: 0.9px 0.9px 1.7px #000000, 0px 0px 0.9px #0d0d0d;
+    background: #000000;
+    border-radius: 9px;
+    border: 1.1px solid #000001;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 3.4px #000000, 0px 0px 0px #0d0d0d;
+    border: 3.4px solid #ffffff;
+    height: 23px;
+    width: 23px;
+    border-radius: 12px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -11.3px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #141414;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 2.6px;
+    cursor: pointer;
+    box-shadow: 0.9px 0.9px 1.7px #000000, 0px 0px 0.9px #0d0d0d;
+    background: #000000;
+    border-radius: 9px;
+    border: 1.1px solid #000001;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 3.4px #000000, 0px 0px 0px #0d0d0d;
+    border: 3.4px solid #ffffff;
+    height: 23px;
+    width: 23px;
+    border-radius: 12px;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 2.6px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #000000;
+    border: 1.1px solid #000001;
+    border-radius: 18px;
+    box-shadow: 0.9px 0.9px 1.7px #000000, 0px 0px 0.9px #0d0d0d;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #000000;
+    border: 1.1px solid #000001;
+    border-radius: 18px;
+    box-shadow: 0.9px 0.9px 1.7px #000000, 0px 0px 0.9px #0d0d0d;
+  }
+  input[type=range]::-ms-thumb {
+    box-shadow: 0px 0px 3.4px #000000, 0px 0px 0px #0d0d0d;
+    border: 3.4px solid #ffffff;
+    height: 23px;
+    width: 23px;
+    border-radius: 12px;
+    background: #ffffff;
+    cursor: pointer;
+    height: 2.6px;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #000000;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #141414;
+  }
+  
+
+  #fonts {
+    display: block;
+    position: relative;
+  }
+  
+
+  
+  #fonts ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+      overflow: auto;
+  }
+  
+  ul li{
+    color: #AAAAAA;
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+  
+  ul li input[type=radio]{
+    position: absolute;
+    visibility: hidden;
+  }
+  
+  ul li label{
+    display: block;
+    position: relative;
+    padding: 10px 10px 10px 50px;
+    font-size: 1rem;
+    margin: 5px auto;
+    z-index: 9;
+    cursor: pointer;
+    -webkit-transition: all 0.25s linear;
+  }
+  
+  ul li:hover label{
+      color: #FFFFFF;
+  }
+  
+  ul li .check{
+    display: block;
+    position: absolute;
+    border: 2px solid #AAAAAA;
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    top: 20px;
+    left: 10px;
+      z-index: 5;
+      transition: border .25s linear;
+      -webkit-transition: border .25s linear;
+  }
+  
+  ul li:hover .check {
+    border: 2px solid #FFFFFF;
+  }
+  
+  ul li .check::before {
+    display: block;
+    position: absolute;
+      content: '';
+    border-radius: 100%;
+    height: 5px;
+    width: 5px;
+    top: 0px;
+      left: 0px;
+    margin: auto;
+      transition: background 0.25s linear;
+      -webkit-transition: background 0.25s linear;
+  }
+  
+  input[type=radio]:checked ~ .check {
+    border: 5px solid white;
+  }
+  
+  input[type=radio]:checked ~ .check::before{
+    background: white;
+  }
+  
+  input[type=radio]:checked ~ label{
+    color: white;
+  }
+  

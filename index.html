@@ -1,51 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Retorica Inspector</title>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-		<link href="main.css" rel="stylesheet" type="text/css" />
-		<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-		
-		<script src="main.js"></script>
-  </head>
-  <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Retorica Showchaos
-      </h1>
-      <p class="subtitle">
-					Uno strumento flessibile e aperto attraverso cui creare e immaginare identità costruire grammatiche compositive e linguaggi.
-      </p>
-		</div>
-		
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta id="theme-color" name="theme-color" content="#ffbe00">
+
+	<base target="_blank">
+	
+	<title>Retorica Inspector</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+	<link href="main.css" rel="stylesheet" type="text/css" />
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+</head>
+<body>
+	<section class="section">
 		<div class="container">
 			<div class="columns">
-				<div class="column is-12">
-						<div class="field">
-								<div class="control">
-						<input type="text" class="input is-large" value="Type Text Here." id="textInput" onkeyup="updateParagraph();" onclick="this.select();" />
-								</div>
-							</div>
-				</div>
-			</div>
-			<div class="columns">
 				<div class="column is-one-quarter">
-						<div id="fonts">
-						</div>
-						<div id="controls">
-						</div>
+					<label class="label">Figure retoriche</label>
+					<div id="fonts"    class="controls">
+						<ul></ul>
+					</div>
+					<div id="controls" class="controls"></div>
+					<label class="label">Colore carattere</label>
+					<div id="fg_color" class="controls"></div>
+					<br><br>
+					<label class="label">Colore sfondo</label>
+					<div id="bg_color" class="controls"></div>
 				</div>
+				<!-- END SIDEBAR -->
 				<div class="column">
-					<p id="text">XYZ MATERA 2019</p>
+					<h1 data-shadow="Retorica Showchaos" class="title">Retorica Showchaos</h1>
+					<p class="subtitle">Uno strumento flessibile e aperto attraverso cui creare e immaginare identità costruire grammatiche compositive e linguaggi.</p>
+					<div class="field">
+						<div class="control">
+							<input type="text" class="input is-medium has-text-black" placeholder="Type some text here." id="sentence" />
+						</div>
+					</div>
+					<p id="text" class="has-text-centered">XYZ MATERA 2019</p>
 				</div>
 			</div>
 		</div>
-  </section>
-  </body>
+	</section>
+	<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+	<script src="./js/main.js"></script>
+	<script src="./js/soundmeter.js"></script>
+</body>
 </html>
-
-
