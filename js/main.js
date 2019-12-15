@@ -180,8 +180,8 @@ $(document).ready(() => {
     $($("input:radio[name=lafont]")[3]).click()
     draw_background(COLORS_ARRAY[Math.floor(4 * Math.random())])
     draw_colors()
-    setup_audio()
-    $("body").on("hover", function() {
-        window.audioContext.resume()
+    $("body").on("click", function() {
+        setup_audio()
+
     })
 })
