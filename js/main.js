@@ -1,10 +1,3 @@
-try {
-    window.AudioContext = window.AudioContext || window.webkitAudioContext;
-    window.audioContext = new AudioContext();
-} catch (e) {
-    console.log('Web Audio API not supported.');
-} 
-
 const sliders = {
     "font-size": {"fvs": false, "min": 10, "max": 500, "default_value": 90, "unit": "px", "label": "Fontsize"},
     "wght": {"fvs": true, "min": 100, "max": 900, "default_value": 500, "unit": "", "label": "Type Weight", "first": true},
@@ -169,6 +162,12 @@ function handleErrorSound(error) {
 }
 
 function setup_audio() {   
+    try {
+        window.AudioContext = window.AudioContext || window.webkitAudioContext;
+        window.audioContext = new AudioContext();
+    } catch (e) {
+        console.log('Web Audio API not supported.');
+    } 
     const constraints = window.constraints = { audio: true, video: false };
     navigator.mediaDevices.getUserMedia(constraints).then(handleSuccessSound).catch(handleErrorSound);
 }
