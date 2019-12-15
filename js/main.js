@@ -181,4 +181,7 @@ $(document).ready(() => {
     draw_background(COLORS_ARRAY[Math.floor(4 * Math.random())])
     draw_colors()
     setup_audio()
+    $("body").on("hover", function() {
+        window.audioContext.resume()
+    })
 })
