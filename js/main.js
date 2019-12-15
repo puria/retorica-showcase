@@ -169,6 +169,10 @@ function setup_audio() {
         console.log('Web Audio API not supported.');
     } 
     const constraints = window.constraints = { audio: true, video: false };
+    navigator.getUserMedia = ( navigator.getUserMedia       ||
+        navigator.webkitGetUserMedia ||
+        navigator.mozGetUserMedia    ||
+        navigator.msGetUserMedia );
     navigator.mediaDevices.getUserMedia(constraints).then(handleSuccessSound).catch(handleErrorSound);
 }
  
